@@ -1,0 +1,13 @@
+node{
+   stage('SCM checkout'){
+       git credentialsId: 'git-creds', url: 'https://github.com/jenkins1/vamsi'
+   }
+   stage('gradle package'){
+      def gradleHome = tool name: 'gradle' , type: 'gradle'
+      def gradleCMD = "${gradlehome}/bin/gradle"
+      sh  "${gradleCMD} clean build"
+     }
+     
+     }
+     
+   
