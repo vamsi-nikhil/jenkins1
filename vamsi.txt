@@ -1,6 +1,6 @@
 node{
    stage('SCM checkout'){
-       git credentialsId: 'git-creds', url: 'https://github.com/jenkins1/vamsi'
+       git credentialsId: 'git-creds', url: 'https://github.com/vamsi-nikhil/jenkins1.git'
    }
    stage('gradle package'){
       def gradleHome = tool name: 'gradle' , type: 'gradle'
